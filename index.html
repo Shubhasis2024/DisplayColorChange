@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+
+    <link rel="stylesheet" href="style.css" />
+    
+  <body>
+
+    
+    <!-- <div class="parent">
+      <div class="day">Sunday</div>
+      <div class="day">Monday</div>
+      <div class="day">Tuesday</div>
+      <div class="day">Wednesday</div>
+    </div> -->
+    <h1>Background Changer</h1>
+    <div class="wrapper">
+      <div class="green circle"></div>
+      <div class="yellow circle"></div>
+      <div class="blue circle"></div>
+      <div class="red circle"></div>
+      <div class="Black circle"></div>
+      <div class="White circle"></div>
+    </div>
+
+    <script>
+      /*const parent = document.querySelector(".parent");
+      parent.style.backgroundColor = "#313131";
+      parent.style.color = "#ffffff";
+
+      console.log(parent);
+      console.log(parent.children);
+      console.log(parent.children[2]);
+
+      parent.children[2].style.backgroundColor = "orange";
+      parent.children[2].style.padding = "10px";*/
+
+      const body = document.querySelector("body");
+      const greenBtn = document.querySelector(".green");
+      const blueBtn = document.querySelector(".blue");
+      const yellowBtn = document.querySelector(".yellow");
+      const redBtn = document.querySelector(".red");
+      const Blackbtn=document.querySelector(".Black");
+      const whitebtn =document.querySelector(".White");
+
+      greenBtn.addEventListener("click",handleClick = () => {
+        body.style.backgroundColor = "green";
+        body.style.color = "#ffffff";
+        body.children[0].innerHTML = "Background Green";
+      });
+
+      blueBtn.addEventListener("click",handleClick1=()=>{
+        body.style.backgroundColor = "blue";
+        body.style.color = "#ffffff";
+        body.children[0].innerHTML = "Background Blue";
+      });
+      yellowBtn.addEventListener("click",handleClick2=()=>{
+        body.style.backgroundColor = "yellow";
+        body.style.color = "black";
+        body.children[0].innerHTML = "Background Yellow";
+      });
+      redBtn.addEventListener("click",handleClick3=()=>{
+        body.style.backgroundColor = "red";
+        body.style.color = "black";
+        body.children[0].innerHTML = "Background Red";
+      });
+      Blackbtn.addEventListener("click",handleClick4=()=>{
+
+        body.style.backgroundColor="Black";
+        body.style.color="white";
+        body.children[0].innerHTML="Background Black";
+      });
+      whitebtn.addEventListener("click",handleClick5=()=>{
+        body.style.backgroundColor="white";
+        body.style.color="black";
+        const text=document.querySelector(`h1`);
+       text.innerHTML="Background White";
+      });
+
+
+      
+    </script>
+  
+  </body>
+</html>
